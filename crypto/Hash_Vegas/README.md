@@ -9,7 +9,7 @@
 ---
 
 ## Challenge
-> “I think the casino is broken. I bought a ticket, the system said I won, and then my bank account instantly hit zero.”
+> "I think the casino is broken. I bought a ticket, the system said I won, and then my bank account instantly hit zero."
 
 The service exposes a casino over TLS with multiple games; the exploit targets the Lottery voucher system.
 
@@ -44,24 +44,5 @@ Result: You can extend a valid SHA‑1 voucher to claim a huge amount while pres
    - Compute `extended_hash`, `extended_data` using the original `voucher_code` as the starting state.
 4. Redeem with the extended pair.
 5. If accepted, request the flag.
-
-Note: Only SHA‑1 vouchers are exploitable; given the challenge’s distribution, success is probabilistic.
-
----
-
-## Exploit Implementation
-Recommended script: `fast_exploit.py`
-- Automates ticket purchases.
-- Performs SHA‑1 length extension with `sha1_extend.py`.
-- Redeems and retrieves the flag on success.
-
-Usage:
-```bash
-python3 fast_exploit.py
-```
-
-Dependencies:
-- Python 3.11+
-- `sha1_extend.py` bundled; optional local testing with `pip install hashpumpy`
 
 ---
