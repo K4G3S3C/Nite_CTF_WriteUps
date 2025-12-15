@@ -1,4 +1,4 @@
-# Hash Vegas /\ Cryptography
+# Hash Vegas / \ Cryptography
 
 - CTF: NiteCTF 2025
 - Category: Cryptography
